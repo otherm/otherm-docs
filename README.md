@@ -1,37 +1,7 @@
-## Welcome to GitHub Pages
+## OVERVIEW
+The oTherm project aims to lower the cost and complexity of conducting monitoring and verification (M&V) studies of renewable thermal technologies deployed for the heating and cooling of buildings.   The project consists of three main components:  (1) a web-based application that serves as the primary data management tool (2) a separate set of Python scripts for accessing and analyzing data, using ground source heat pump as an example technology, and (3) a set of [Best Practices](https://unh.box.com/s/v6ru037omhz54obywmk4apkzk1jsvu14) documents that guide practioners on establising a monitoring and verification program to meet their specific needs.   By standardizing the data collection and documentation of individual M&V projects, there is a greater ability to share data between projects that would collectively improve the rate at which clean heating and cooling technologies are adopted and deployed. 
 
-You can use the [editor on GitHub](https://github.com/otherm/otherm-docs/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+This documentation focuses on the deployment of web-application for an *othermsite* that would be used by an individual M&V program. The web-application is written in Django/Python with ___ java libraries.   The application requires two backend databases: (1) a PostgreSQL database for the Django models, and (2) an InfluxDB database for the time series monitoring data.  
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The web-application provides a frontend browser-based interface for users to input data through individual forms and uploading files.  A full set of APIs provide the user with easy access to the data.  Example Python scripts are provided ([oTherm_GSHP](https://github.com/otherm/gshp-analysis)) to illustrate how those APIs can be incorporated in a data analyses.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/otherm/otherm-docs/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
