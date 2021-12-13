@@ -5,8 +5,8 @@ This documentation focuses on the deployment of web-application for an *othermsi
 
 The web-application provides a frontend browser-based interface for users to input data through individual forms and uploading files.  A full set of APIs provide the user with easy access to the data.  
 
-Example Python scripts are provided ([oTherm_GSHP](https://github.com/otherm/gshp-analysis)) to illustrate how those APIs can be incorporated in a data analyses.  Documentation for the analysis scripts can be found on [Read the Docs] (https://otherm-gshp-analysis.readthedocs.io/en/latest/#)
+Example Python scripts are provided ([oTherm_GSHP](https://github.com/otherm/gshp-analysis)) to illustrate how those APIs can be incorporated in a data analyses.  Documentation for the analysis scripts can be found on [Read the Docs](https://otherm-gshp-analysis.readthedocs.io/en/latest/#)
 
 ### Research & Development Site
 
-[R&D Site] (./rd-site.html)
+[R&D Site](./rd-site.html)
