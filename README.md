@@ -7,6 +7,6 @@ The web-application provides a frontend browser-based interface for users to inp
 
 Example Python scripts are provided ([oTherm_GSHP](https://github.com/otherm/gshp-analysis)) to illustrate how those APIs can be incorporated in a data analyses.  Documentation for the analysis scripts can be found on [Read the Docs] (https://otherm-gshp-analysis.readthedocs.io/en/latest/#)
 
-# Research & Development Site
+### Research & Development Site
 
 [R&D Site] (./rd-site.html)
