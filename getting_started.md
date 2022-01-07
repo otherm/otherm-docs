@@ -6,6 +6,7 @@ This project utilizes Docker Compose, which is a tool that allows for the trivia
 ---
 
 Although the usage of Docker eliminates the need to install these directly, the following libraries/frameworks are utliized in the various containers to run the project:
+
 | Library/framework | Purpose |
 | ----------- | ----------- |
 | Django | The web framework used for site. (verson 2.2.6)|

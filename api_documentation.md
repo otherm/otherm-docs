@@ -26,17 +26,17 @@ site_dict = site_url.json()[0]
 
 ### Response
 ```json
-[{"id":1,
-  "name":"Keene NH",
-  "description":"Single family residence",
-  "city":"Keene",
-  "zip_code":"03455",
-  "application":"New construction",
-  "uuid":"0483e71e-974c-4ea6-8096-640c2ed9c44a",
-  "state":"New Hampshire",
-  "timezone":"US/Eastern",
-  "thermal_load":"adcedbf2-4a11-4f4d-890a-64c7430092f7",
-  "weather_station_nws_id":"KPSM"}
+[{id:1,
+  name:"Keene NH",
+  description:"Single family residence",
+  city:"Keene",
+  zip_code:"03455",
+  application:"New construction",
+  uuid:"0483e71e-974c-4ea6-8096-640c2ed9c44a",
+  state:"New Hampshire",
+  timezone:"US/Eastern",
+  thermal_load:"adcedbf2-4a11-4f4d-890a-64c7430092f7",
+  weather_station_nws_id:"KPSM"}
 ]
 ```
 ## Equipment Endpoint
@@ -107,7 +107,7 @@ site_dict = site_url.json()[0]
        outdoor_temperature:3.0,
        source_returntemp:null,
        source_supplytemp:10.187292008993,
-       sourcefluid_flowrate:9.0},
+       sourcefluid_flowrate:0.0},
     {time:"2016-01-01T00:35:54Z",
        equipment:"5406f27f-5b03-4435-b705-fbdd3e814696",
        heat_flow_rate:17105.2249418171,
