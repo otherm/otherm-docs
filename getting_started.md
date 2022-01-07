@@ -1,4 +1,5 @@
-# Overview
+# Getting Started
+
 This document serves to outline the process of building, running, and interacting with the Docker containers that this project is composed of.
 
 This project utilizes Docker Compose, which is a tool that allows for the trivial definition and management of several Docker containers simultaneously. The documentation for Docker Compose can be found [here.](https://docs.docker.com/compose/)

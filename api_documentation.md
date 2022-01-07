@@ -13,6 +13,7 @@ site_dict = site_url.json()[0]
 ```
 
 ## Site Endpoint
+Retrieves data about an oTherm site.
 
 | API Endpoint | 
 |------------|  
@@ -74,12 +75,12 @@ site_dict = site_url.json()[0]
 ```
 
 ## Equipment Data Endpoint
-
+Returns monitoring data for all equipment at a site.  
+  
 |  API Endpoint   | 
 | --------------- |  
-| /api/equipment/ |
-
-
+| /api/equipment_data/ |
+ 
 
 ### Query Parameters
 
@@ -90,6 +91,7 @@ site_dict = site_url.json()[0]
 | end_date | Optional | End of record to retrieve, in format `YYYY-MM-DD` | string |
 
 ### Response
+List of json objects, each with monitoring data for a piece of equipment 
 ```json
  [{id:5,
   uuid:"5406f27f-5b03-4435-b705-fbdd3e814696",
@@ -119,3 +121,212 @@ site_dict = site_url.json()[0]
        sourcefluid_flowrate:9.0}]]
 ```
 
+## Monitoring System Endpoint
+Returns specification of one ore more monitoring systems
+
+|  API Endpoint   | 
+| --------------- |  
+| /api/monitoring_system/ |
+
+### Query Parameters
+
+| Query string parameter | Required/optional | Description | Type |
+| ----------------------- | ---------------| ------------ | -------- |
+| name | Optional | Name of monitoring system.  If not provided, specs for all monitoring systems are returned | string |
+
+
+### Response
+```json
+[{id:1,
+  name:"GxTracker Power",
+  description:"",
+  manufacturer:1,
+  monitoring_system_specs:
+      [{uuid:"89f2138a-98ad-442a-8899-f22debe16af3",
+            measurement_spec:{name:"HPP VA W 8% EP",
+                          description:"Heat pump power, volt-amps, electrical panel",
+                          type:{name:"heatpump_power",
+                                msp_columns:null,
+                                description:""},
+                          accuracy:8.00000,
+                          accuracy_pct:true,
+                          meas_bias_abs:0.0,
+                          meas_bias_pct:0.0,
+                          location:{name:"Electrical Panel",
+                                    description:""},
+                          unit:{name:"W","description":"watts"}}},
+       {uuid:"ada86c55-6b61-4044-8775-77a7d7a7aa03",
+            measurement_spec:{name:"LWT OMP 0.1 C",
+                          description:"source return temperature, on metal pipe, calibrated",
+                          type:{name:"source_returntemp_C",
+                                msp_columns:null,
+                                description:"source return (leaving) water temperature"},
+                          accuracy:0.10000,
+                          accuracy_pct:false,
+                          meas_bias_abs:0.0,
+                          meas_bias_pct:0.0,
+                          location:{name:"on metal pipe",
+                                    description:""},
+                          unit:{name:"C",
+                                description:"degrees Celsius"}}},
+         {uuid:"ba2060c5-7027-447c-b50a-a327d5250543",
+              measurement_spec:{name:"EWT OMP 0.1 C",
+                            description:"source fluid supply temp on metal pipe, calibrated sensor",
+                            type:{name:"source_supplytemp_C",
+                                  msp_columns:null,
+                                  description:"ground loop source (entering) water temperature"},
+                            accuracy:0.10000,
+                            accuracy_pct:false,
+                            meas_bias_abs:0.0,
+                            meas_bias_pct:0.0,
+                            location:{name:"on metal pipe",
+                                      description":""},
+                            unit:{name:"C",
+                                  description:"degrees Celsius"}}},
+         {uuid:"f11340cf-800d-446f-99b4-5617717039b3",
+              measurement_spec:{name:"AuP VA W 8% HP",
+                            description:"Aux power with volt-amps in heat pump",
+                            type:{name:"heatpump_aux",
+                                  msp_columns:null,
+                                  description:"auxiliary electric heat"},
+                            accuracy:8.00000,
+                            accuracy_pct:true,
+                            meas_bias_abs:0.0,
+                            meas_bias_pct:0.0,
+                            location:{name:"heat pump",
+                                      description:""},
+                            unit:{name:"W",
+                                  description:"watts"}}}]}]
+```
+## Equipment Monitoring Endpoint
+Returns the monitoring system information for a specified piece of equipment
+
+|  API Endpoint   | 
+| --------------- |  
+| /api/equipment_monitoring/ |
+
+### Query Parameters
+
+| Query string parameter | Required/optional | Description | Type |
+| ----------------------- | ---------------| ------------ | -------- |
+| equip_id | Required | Postgres id of equipment (not uuid) | string |
+
+
+### Response
+```json
+[{id:1,
+  start_date:"2012-06-01",
+  end_date:null,
+  equip_id:3, 
+  monitoring_system_spec:1,
+      monitoring_sys_info:{id:1,
+                           name:"GxTracker Power",
+                           description:"",
+                           manufacturer:1,
+                           monitoring_system_specs:[*see monitoring_system api*]}}]  
+```
+
+## Thermal Source Endpoint
+Returns the thermal sources for a site.
+
+
+|  API Endpoint   | 
+| --------------- |  
+| /api/thermal_source/ |
+
+### Query Parameters
+
+| Query string parameter | Required/optional | Description | Type |
+| ----------------------- | ---------------| ------------ | -------- |
+| site  | Required | Site id | int |
+
+### Response
+```json
+
+[{id:2,
+  site:2,
+  source_id:1,
+  name:"site_source_map",
+  source_info:{id:1,
+               uuid:"cee6ac70-053c-40c1-8eab-0333f5d2f1e7",
+               name:"vertical_ghex",
+               description:"",
+               spec:2,
+               source_type:{id:1, 
+                            name:"ground source",
+                            description:""},
+               source_spec_info:{freeze_protection:20.0, 
+                                 grout_type:"enhanced",
+                                 formation_conductivity:2.2,
+                                 formation_type:"rock",
+                                 grout_conductivity:1.2,
+                                 antifreeze_info:
+                                      {id:1,
+                                       name:"Kilfrost GEO",
+                                       description:""},
+                                 ghex_specs:{id:1,
+                                             uuid:"6f3519bb-4b68-4a10-9f8e-95e6e2d26014",
+                                             name:"2 x 2 x 400 ghex pipe spec",
+                                             dimension_ratio:"DR11",
+                                             n_pipes_in_circuit:2,
+                                             n_circuits:2,
+                                             total_pipe_length:400.0}}}}]
+```
+## Thermal Load Endpoint
+Returns the thermal load specs for a site
+
+
+|  API Endpoint   | 
+| --------------- |  
+| /api/thermal_load/ |
+
+### Query Parameters
+
+| Query string parameter | Required/optional | Description | Type |
+| ----------------------- | ---------------| ------------ | -------- |
+| id  | Required | Site id | int |
+
+### Response
+```json
+[{id:2,
+  name:"Durham",
+  city:"Durham",
+  state:"New Hampshire",
+  thermal_load:{uuid:"f219d328-bd69-4ed9-ac6d-7da5585c6794",
+                name:"load for Durham site",
+                description:"",
+                conditioned_area:2200.0,
+                heating_design_load:38.0,
+                cooling_design_load:62.0,
+                heating_design_oat:-2.0,
+                cooling_design_oat:90.0}}]
+```
+
+## Weather Data Endpoint
+Returns the weather data observations for specified weather station.  Data must be in the oTherm database.
+
+|  API Endpoint   | 
+| --------------- |  
+| /api/weather_station/ |
+
+| Query string parameter | Required/optional | Description | Type |
+| ----------------------- | ---------------| ------------ | -------- |
+| nws_id | Required | Weather station id  | string |
+| start_date | Optional | Start date of records to retrieve in format `YYYY-MM-DD` | string |
+| end_date | Optional | End of record to retrieve, in format `YYYY-MM-DD` | string |
+
+```json
+[{nws_id:"KPSM",
+  lat:43.083,
+  lon:-70.817,
+  weather_data:[{time:"2019-12-06T13:56:00Z",
+                 humidity_percent:57.16,
+                 pressure_kpa:101.73, 
+                 site:"KPSM",
+                 temperature_c:-2.9},
+                {time:"2019-12-06T14:56:00Z",
+                 humidity_percent:56.02,
+                 pressure_kpa:101.73,
+                 site:"KPSM",
+                 temperature_c:-2.2}]}]
+```
