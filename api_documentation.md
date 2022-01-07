@@ -13,11 +13,13 @@ site_dict = site_url.json()[0]
 ```
 
 ## Site Endpoint
+
 | API Endpoint | 
-| -------------------------------------- |  
+|------------|  
 |/api/equipment_data/|
 
 ### Query Parameters
+
 | Query string parameter | Required/optional | Description | Type |
 | ----------------------- | ---------------| ------------ | -------- |
 | site | Required | Site id | int |
@@ -38,11 +40,13 @@ site_dict = site_url.json()[0]
 ]
 ```
 ## Equipment Endpoint
+
 | API Endpoint | 
 | ------------------|  
 |/api/equipment/|
 
 ### Query Parameters
+
 | Query string parameter | Required/optional | Description | Type |
 | ----------------------- | ---------------| ------------ | -------- |
 | site | Required | Site id | int |
@@ -70,6 +74,7 @@ site_dict = site_url.json()[0]
 ```
 
 ## Equipment Data Endpoint
+
 | API Endpoint | 
 | --------------|  
 |/api/equipment/|
@@ -77,6 +82,7 @@ site_dict = site_url.json()[0]
 
 
 ### Query Parameters
+
 | Query string parameter | Required/optional | Description | Type |
 | ----------------------- | ---------------| ------------ | -------- |
 | site | Required | Site id | int |
