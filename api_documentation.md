@@ -180,7 +180,7 @@ Returns specification of one ore more monitoring systems
                             meas_bias_abs:0.0,
                             meas_bias_pct:0.0,
                             location:{name:"on metal pipe",
-                                      description":""},
+                                      description:""},
                             unit:{name:"C",
                                   description:"degrees Celsius"}}},
          {uuid:"f11340cf-800d-446f-99b4-5617717039b3",
