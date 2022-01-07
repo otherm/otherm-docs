@@ -75,9 +75,9 @@ site_dict = site_url.json()[0]
 
 ## Equipment Data Endpoint
 
-| API Endpoint | 
-| --------------|  
-|/api/equipment/|
+|  API Endpoint   | 
+| --------------- |  
+| /api/equipment/ |
 
 
 
