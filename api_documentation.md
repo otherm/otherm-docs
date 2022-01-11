@@ -17,13 +17,16 @@ Retrieves data about an oTherm site.
 
 | API Endpoint | 
 |------------|  
-|/api/equipment_data/|
+|/api/site/|
 
 ### Query Parameters
 
 | Query string parameter | Required/optional | Description | Type |
 | ----------------------- | ---------------| ------------ | -------- |
-| site | Required | Site id | int |
+| name | Optional  | site name | string |
+| id  | Optional | site id  | int |
+
+If no query pameter is provided, information for all sites is returned.
 
 ### Response
 ```json
@@ -119,6 +122,45 @@ List of json objects, each with monitoring data for a piece of equipment
        source_returntemp:6.5596691201413,
        source_supplytemp:8.749792008993,
        sourcefluid_flowrate:9.0}]]
+```
+## Equipment Specifications Endpoint
+Returns heating and cooling capacities of equipment
+
+| API Endpoint | 
+| ------------------|  
+|/api/equipment_specs/|
+
+### Query Parameters
+
+| Query string parameter | Required/optional | Description | Type |
+| ----------------------- | ---------------| ------------ | -------- |
+| model | Optional | equipment model | string |
+
+### Response
+```json
+[{n_stages:12,
+  manufacturer:7,
+  equip_model_info:{id:"EX-MR036",
+                    equipment_type:{name:"ASHP"},
+                                    model_number:null,
+                                    manufacturer:7},
+                    equip_specs:{id:4,
+                                 name:"Example spec",
+                                 uuid:"1b16eb2c-2bfa-4b6c-9f17-d55f93886159",
+                                 description:"",
+                                 n_stages:12,
+                                 hc_at_5F:1.0,
+                                 hc_at_17F:2.0,
+                                 hc_at_47F:3.0,
+                                 cc_at_82F:4.0,
+                                 cc_at_95F:5.0,
+                                 cop_at_5F:6.0,
+                                 cop_at_17F:7.0,
+                                 cop_at_47F:8.0,
+                                 cop_at_82F:9.0,
+                                 cop_at_95F:10.0,
+                                 manufacturer:7,
+                                 model:"EX-MR036"}}]
 ```
 
 ## Monitoring System Endpoint

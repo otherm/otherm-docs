@@ -2,9 +2,12 @@
 The oTherm project aims to lower the cost and complexity of conducting monitoring and verification (M&V) 
 studies of renewable thermal technologies deployed for the heating and cooling of buildings.   The project 
 consists of three main components:  (1) a web-based application that serves as the primary data management 
-tool (2) a separate set of Python scripts for accessing and analyzing data, using ground source heat pump as 
-an example technology, and (3) a set of [Best Practices](https://unh.box.com/s/v6ru037omhz54obywmk4apkzk1jsvu14) 
-documents that guide practioners on establising a monitoring and verification program to meet their specific needs.   By standardizing the data collection and documentation of individual M&V projects, there is a greater ability to share data between projects that would collectively improve the rate at which clean heating and cooling technologies are adopted and deployed. 
+tool (2) a separate set of Python scripts for accessing and analyzing data, using ground source heat pump 
+as an example technology, and (3) a set of [Best Practices](https://unh.box.com/s/v6ru037omhz54obywmk4apkzk1jsvu14) 
+documents that guide practioners on establising a monitoring and verification program to meet their specific needs. 
+By standardizing the data collection and documentation of individual M&V projects, there is a greater ability to share 
+data between projects that would collectively improve the rate at which clean heating and cooling technologies are 
+adopted and deployed. 
 
 This documentation focuses on the deployment of web-application for an *othermsite* that would be used by an 
 individual M&V program. The web-application is written in Django/Python with ___ java libraries.   The application
@@ -18,6 +21,20 @@ and uploading files.  A full set of APIs provide the user with easy access to th
 Example Python scripts are provided ([oTherm_GSHP](https://github.com/otherm/gshp-analysis)) to illustrate how 
 those APIs can be incorporated in a data analyses.  Documentation for the analysis scripts can be found 
 on [Read the Docs](https://otherm-gshp-analysis.readthedocs.io/en/latest/#)
+
+## Resources
+
+| Resource | Description |
+|--------- | ------------ |
+| [Getting Started](https://otherm.org/getting_started) |  Setting up an oTherm app instance  |
+| oTherm  code  |  oTherm application source code |
+| [API Documentation](https://otherm.org/api_documentation) | Accessing oTherm data through APIs |
+| [Example GSHP analytics](https://github.com/otherm/gshp-analysis) |  Python scripts for analyzing oTherm GSHP data |
+| [Documentation of GSHP scripts](https://otherm-gshp-analysis.readthedocs.io/en/latest/index.html) | Read the Docs documentation of GSHP scripts |
+|  : Rowspan is 2  : || : Data Providers |
+|                    || : Data Users     |
+
+
 
 ### Research & Development Site
 
