@@ -12,14 +12,16 @@ a comprehensive description of each of the tables and their relationships.
 
 ![oTherm SQL Structure](./data_structure_emp_sql.png)
 
+
 ### Facility Level Data (SQL)
 The static data is stored in a PostgreSQL database and the tables can be split into two general groups.  The first 
 group of tables are those that likely contain new and site-specific information.  The second group of 
 tables contain information that can likely be utilized by multiple sites.  For example, a monitoring system 
 may be defined once and then an instance of that monitoring system may be deployed at multiple sites.   Tables 
 with site data can be configured to be accessible to oTherm users while tables that can be used between sites can 
-be restricted to those with administrative privileges.   The SQL data model specification can be downloaded
- [here](./django-data-model-specs.pdf)  
+be restricted to those with administrative privileges.   The [SQL data model specification](./django-data-model-specs.pdf) 
+provides a detailed description of the SQL tables and fields.
+ [here]  
 
 The relationships between the tables is summarized in SchemaSpy images in both [compact](./relationships.real.compact.png) 
 and the [large](./relationships.real.large.png) formats.
@@ -33,7 +35,7 @@ measurement is a collection of tags, fields, and timestamps.
 
 In oTherm, the heat pump operating data for all heat pumps and all times is considered a measurement ‘monitoring-data’ 
 and the weather data is considered a separate measurement (‘weather-data’). The elements for each of these measurements 
-are described in the table [here](./influx-data-model-specs.pdf).
+are described in the [Time-seried data model specification](./influx-data-model-specs.pdf).
 
 #### Line Protocol Input
 In some cases, it may be necessary to upload time series data into the database.  This can be done using text files 

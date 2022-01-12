@@ -19,7 +19,7 @@ This site serves as the landing page for project documentation, as itemized in t
 |--------- | ------------ |
 | [Getting Started](https://otherm.org/getting_started) |  Setting up an oTherm app instance  |
 | oTherm  code  repository  |  oTherm application source code |
-| [oTherm data model specifications](./django-model-specs/data-model-specification) | A deep dive into the oTherm data models |
+| [Data model specifications](./django-model-specs/data-model-specification) | A deep dive into the oTherm data models |
 | [API Documentation](https://otherm.org/api_documentation) | Accessing oTherm data through APIs |
 | [GSHP analytics repository](https://github.com/otherm/gshp-analysis) |  Python scripts for analyzing oTherm GSHP data |
 | [GSHP analytics documentation](https://otherm-gshp-analysis.readthedocs.io/en/latest/index.html) | Read the Docs documentation of GSHP scripts |
@@ -40,11 +40,12 @@ the Environment to secure a grant from the U.S. Department of Energy, Office of 
 build a functional prototype. The UNH Interoperability Lab has been instrumental in the development work throughout
 the process. 
 
-#### Disclaimer:  
+#### Disclaimer  
 These materials were prepared as an account of work sponsored by an agency of the United States Government.  Neither 
 the United States Government nor any agency thereof, nor any of their employees, makes any warranty, express or implied, 
 or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, 
 apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights.  
+
 Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or 
 otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States 
 Government or any agency thereof.  The views and opinions of authors expressed herein do not necessarily state or 
