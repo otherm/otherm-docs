@@ -19,7 +19,7 @@ This site serves as the landing page for project documentation, as itemized in t
 |--------- | ------------ |
 | [Getting Started](https://otherm.org/getting_started) |  Setting up an oTherm app instance  |
 | oTherm  code  repository  |  oTherm application source code |
-| [oTherm data model specifications](./django-model-specs) | A deep dive into the oTherm data models |
+| [oTherm data model specifications](./django-model-specs/data-model-specification) | A deep dive into the oTherm data models |
 | [API Documentation](https://otherm.org/api_documentation) | Accessing oTherm data through APIs |
 | [GSHP analytics repository](https://github.com/otherm/gshp-analysis) |  Python scripts for analyzing oTherm GSHP data |
 | [GSHP analytics documentation](https://otherm-gshp-analysis.readthedocs.io/en/latest/index.html) | Read the Docs documentation of GSHP scripts |
