@@ -55,3 +55,4 @@ reflect those of the United States Government or any agency thereof.
 
 
 
+[access a pdf](./django-model-specs/django-data-model-specs.pdf)
