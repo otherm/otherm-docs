@@ -8,7 +8,7 @@ site_name = '03824'
 site_url = "https://[otherm_instance_url]/api/site/?name=%s" % (site_name)
 site_response = requests.get(site_url, auth=([username], [password]))
 
-site_dict = site_url.json()[0]
+site_dict = site_url.response()[0]
 
 ```
 
