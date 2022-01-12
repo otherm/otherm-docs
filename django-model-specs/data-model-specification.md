@@ -21,13 +21,11 @@ may be defined once and then an instance of that monitoring system may be deploy
 with site data can be configured to be accessible to oTherm users while tables that can be used between sites can 
 be restricted to those with administrative privileges.   The [SQL data model specification](./django-data-model-specs.pdf) 
 provides a detailed description of the SQL tables and fields.
- [here]  
 
 The relationships between the tables is summarized in SchemaSpy images in both [compact](./relationships.real.compact.png) 
 and the [large](./relationships.real.large.png) formats.
 
 ### Time Series Data (no-SQL)
-Time Series Data (No-SQL)
 While we often associate the term ‘measurement’ with a single instance. In the context of time series data, a 
 measurement is a collection of tags, fields, and timestamps.  
 
@@ -46,10 +44,27 @@ sample Python Script for creating line-protocol files is provided in the [oTherm
 
 
 ## Mapping to related DOE Data Specifications
-
+oTherm looks to build upon ongoing efforts to develop data standards and data repositories related to building energy 
+usage with renewable thermal systems installed in buildings.  There are two Department of Energy supported data 
+standards that are particularly relevant to oTherm.  
+  
 ### Mapping to BEDES
+The data elements of the facility level data model are mapped onto the Building Energy Data Exchange Specification (BEDES) 
+to facilitate the integration of oTherm with other building energy applications.   The BEDES dictionary is organized 
+into data terms that each have a data types that include Decimal, Integer, String, TimeStamp, and Constrained Lists.  
+These individual (atomic) terms can also be combined into Composite Terms to provide additional context.   For example, 
+the term to describe the area of a building that receives space conditioning (conditioned_area) can be defined by 
+combining two atomic BEDES  terms (Conditioned Status = “Conditioned” and Area = [value]) with units of square feet.  
+The creation of composite terms can be subjective and for some terms that were not originally envisioned in BEDES, 
+the mapping can become cumbersome and the benefit of mapping becomes questionable.   This is true for many of the 
+oTherm terms that describe specific characteristics of a ground loop heat exchanger. 
 [oTherm mapping to BEDES](./oTherm_BEDES_mapping.pdf)
 
 ### Mapping to NGDS 
+The National Geotherm Data System enables compilation of a diverse set of data products over a wide 
+range of geothermal applications.  Here, the oTherm data model fields have been mapped on the 
+[NGDS Heat Pump Facility](https://geothermaldata.org/content-model/heat-pump-facility) model. In general, the 
+NGDS Heat Pump Facility model places more emphasis on the characteristics of the subsurface and the ground heat 
+exchanger.   
 [oTherm mapping to NGDS](./oTherm_NGDS-HeatPumpFacility_mapping.pdf)
   

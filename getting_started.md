@@ -30,7 +30,7 @@ In order to build and run the containers via Docker Compose, the following appli
 ### Configuration
 Before running the containers, some environement-specific configuration is needed.
 
-The file `othermsite/docker/.env.prod` contains several environment variables that are utilized by the web :link here container. The `DJANGO_ALLOWED_HOSTS` variable needs to be set to whatever the hostname used to access the site will be. For example, if the site will be accessed by the URL `http://othermsite.mydomain/`, then `othermsite.mydomain` must be added to the `DJANGO_ALLOWED_HOSTS` variable. Multiple hosts may be specified by separating them with a space.
+The file `othermsite/docker/.env.prod` contains several environment variables that are utilized by the web :link here container. The `DJANGO_ALLOWED_HOSTS` variable needs to be set to whatever the hostname used to access the site will be. For example, if the site will be accessed by the URL `https://othermsite.mydomain/`, then `othermsite.mydomain` must be added to the `DJANGO_ALLOWED_HOSTS` variable. Multiple hosts may be specified by separating them with a space.
 
 The documentation for this variable can be found [here](https://docs.djangoproject.com/en/2.2/ref/settings/#allowed-hosts). **However**, note that this documentation specifies the usage of this variable in Python, but this environment variable is manipulated before it's read by Python. As a result, specifying the hosts as a Python list (as the aformentioned documentation suggests) will not work. Instead, the hosts should be space-separated and without quotes.
 
@@ -55,7 +55,7 @@ The purpose of the `influxdb` container is to host the database instance that is
 The purpose of the `web` container is to run the Django 2.2 instance. Documentation for this Django version can be found [here.](https://docs.djangoproject.com/en/2.2/)
 
 ### nginx
-The purpose of the `nginx` container is to run an nginx instance that handles the incoming requests and directs them accordingly. Documentation for nginx can be found [here.](http://nginx.org/en/docs/)
+The purpose of the `nginx` container is to run an nginx instance that handles the incoming requests and directs them accordingly. Documentation for nginx can be found [here.](https://nginx.org/en/docs/)
 
 ### certbot
 The purpose of the `certbot` container is to generate certificates for HTTPS, if desired. Documentation on how to utilize this container can be found [here.](https://eff-certbot.readthedocs.io/en/stable/install.html#running-with-docker) Note that there is additional, host-specific configuration required for certbot to function correctly.
@@ -129,7 +129,7 @@ Login to the shell using the InfluxDB administrator username and password. This 
 
 `bash-5.0# influx -username [admin-username] -password [admin-password]`
 
-    Connected to http://localhost:8086 version 1.8.6
+    Connected to https://localhost:8086 version 1.8.6
     InfluxDB shell version: 1.8.6
     >SHOW DATABASES
 

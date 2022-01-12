@@ -5,7 +5,7 @@ The primary method to access data in an oTherm instance is through a set of APIs
 import requests
 
 site_name = '03824'
-site_url = "http://[otherm_instance_url]/api/site/?name=%s" % (site_name)
+site_url = "https://[otherm_instance_url]/api/site/?name=%s" % (site_name)
 site_response = requests.get(site_url, auth=([username], [password]))
 
 site_dict = site_url.json()[0]
