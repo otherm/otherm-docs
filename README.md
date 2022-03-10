@@ -18,7 +18,7 @@ This site serves as the landing page for project documentation, as itemized in t
 | Resource | Description |
 |--------- | ------------ |
 | [Getting Started](https://otherm.org/getting_started) |  Setting up an oTherm app instance  |
-| oTherm  code  repository  |  oTherm application source code |
+| [oTherm  code  repository](https://github.com/otherm/otherm-app)  |  oTherm application source code |
 | [Data model specifications](./django-model-specs/data-model-specification) | A deep dive into the oTherm data models |
 | [API Documentation](https://otherm.org/api_documentation) | Accessing oTherm data through APIs |
 | [GSHP analytics repository](https://github.com/otherm/gshp-analysis) |  Python scripts for analyzing oTherm GSHP data |
@@ -33,8 +33,8 @@ At the conclusion of the grant, the R&D oTherm instance that is hosted by the UN
 available [R&D Site](./rd-site.html)
 
 ### About the oTherm Project
-The oTherm project was initiated as part of discussions in the Renewable Thermal Alliance (RTA) and initiated with an
-RTA Innovation Grant to the University of New Hamsphire (UNH) to begin work on data dictionaries.  Subsequently, UNH 
+The oTherm project was initiated as part of discussions in the Renewable Thermal Alliance (RTA).  With support of an 
+RTA Innovation Grant, the University of New Hamsphire (UNH) began work on data dictionaries.  Subsequently, UNH 
 partnered with the New York State Research and Development Authority (NYSERDA) and the Yale Center for Business and 
 the Environment to secure a grant from the U.S. Department of Energy, Office of State Energy Programs(DE-EE0008619 ) to 
 build a functional prototype. The UNH Interoperability Lab has been instrumental in the development work throughout
