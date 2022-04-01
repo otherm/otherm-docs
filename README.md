@@ -24,7 +24,7 @@ This site serves as the landing page for project documentation, as itemized in t
 | [GSHP analytics repository](https://github.com/otherm/gshp-analysis) |  Python scripts for analyzing oTherm GSHP data |
 | [GSHP analytics documentation](https://otherm-gshp-analysis.readthedocs.io/en/latest/index.html) | Read the Docs documentation of GSHP scripts |
 |  Best Practices Documents | [Data Providers](https://unh.box.com/s/u9gk97rmrlchg3w2mtoy15p7hdgoxmfe) |
-|                      |  [Data Users](https://unh.box.com/s/w1p1w1311cu6ml7i0rpttb2qjcps4kde)     |
+|                      |  [Data Users](/docs/oTherm_BP_DataUsers_GSHP_v1.0.pdf)     |
 | Data Dictionary Design Documents | [Device Level Data](https://unh.box.com/s/bg2ueautmjn09xn3n0oe9ridyy4m4cbx) |
 |                           | [Facility Level Data](https://unh.box.com/s/oc5jgvcjxvtc8bmbvchc64vyp33kpjue) |
 
