@@ -4,7 +4,7 @@ studies of renewable thermal technologies deployed for the heating and cooling o
 consists of three main components:  (1) a web-based application that serves as the primary data management 
 tool (2) a separate set of Python scripts for accessing and analyzing data, using ground source heat pump 
 as an example technology, and (3) a set of Best Practices documents that guide data providers on what capabilities 
-are expected for an oTherm monitoring system and M&V practioners on establising a monitoring and verification 
+are expected for an oTherm monitoring system and M&V practitioners on establishing a monitoring and verification 
 program to meet their specific needs.
  
 By standardizing the data collection and documentation of individual M&V projects, there is a greater ability 
@@ -23,10 +23,10 @@ This site serves as the landing page for project documentation, as itemized in t
 | [API Documentation](https://otherm.org/api_documentation) | Accessing oTherm data through APIs |
 | [GSHP analytics repository](https://github.com/otherm/gshp-analysis) |  Python scripts for analyzing oTherm GSHP data |
 | [GSHP analytics documentation](https://otherm-gshp-analysis.readthedocs.io/en/latest/index.html) | Read the Docs documentation of GSHP scripts |
-|  Best Practices Documents | [Data Providers](https://unh.box.com/s/u9gk97rmrlchg3w2mtoy15p7hdgoxmfe) |
+|  Best Practices Documents | [Data Providers](/docs/oTherm_BP_DataProviders_v1.1.pdf) |
 |                      |  [Data Users](/docs/oTherm_BP_DataUsers_GSHP_v1.0.pdf)     |
-| Data Dictionary Design Documents | [Device Level Data](https://unh.box.com/s/bg2ueautmjn09xn3n0oe9ridyy4m4cbx) |
-|                           | [Facility Level Data](https://unh.box.com/s/oc5jgvcjxvtc8bmbvchc64vyp33kpjue) |
+| Data Dictionary Design Documents | [Device Level Data](/docs/oTherm_DeviceLevel_DataModel_v1.1.pdf) |
+|                           | [Facility Level Data](/docs/oTherm_FacilityLevel_DataModel_v1.2.pdf) |
 
 
 At the conclusion of the grant, the R&D oTherm instance that is hosted by the UNH Interoperability Lab will be 
@@ -34,7 +34,7 @@ available [R&D Site](./rd-site.html)
 
 ### About the oTherm Project
 The oTherm project was initiated as part of discussions in the Renewable Thermal Alliance (RTA).  With support of an 
-RTA Innovation Grant, the University of New Hamsphire (UNH) began work on data dictionaries.  Subsequently, UNH 
+RTA Innovation Grant, the University of New Hampshire (UNH) began work on data dictionaries.  Subsequently, UNH 
 partnered with the New York State Research and Development Authority (NYSERDA) and the Yale Center for Business and 
 the Environment to secure a grant from the U.S. Department of Energy, Office of State Energy Programs(DE-EE0008619 ) to 
 build a functional prototype. The UNH Interoperability Lab has been instrumental in the development work throughout
