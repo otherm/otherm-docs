@@ -30,7 +30,7 @@ This site serves as the landing page for project documentation, as itemized in t
 
 
 At the conclusion of the grant, the R&D oTherm instance that is hosted by the UNH Interoperability Lab will be 
-available [R&D Site](./rd-site.html)
+available [R&D Site](https://otherm.iol.unh.edu)
 
 ### About the oTherm Project
 The oTherm project was initiated as part of discussions in the Renewable Thermal Alliance (RTA).  With support of an 
